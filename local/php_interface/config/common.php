@@ -2,8 +2,8 @@
 /**
  * Общая конфигурация для всех сайтов и окружений
  */
-\Your\Environment\EnvironmentManager::getInstance()->addConfig(
-	new \Your\Environment\Configuration\CommonConfiguration(
+\YT\Environment\EnvironmentManager::getInstance()->addConfig(
+	new \YT\Environment\Configuration\CommonConfiguration(
 		array(
 			'interiorIBlockId' => 1,
 			'exteriorIBlockId' => 2,

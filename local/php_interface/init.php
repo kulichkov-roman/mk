@@ -2,9 +2,9 @@
 require_once 'vendor/YourTools/bootstrap.php';
 require_once 'classes/AutoLoader.php';
 
-\spl_autoload_register('\MLTK\AutoLoader::autoLoad');
+\spl_autoload_register('\YT\AutoLoader::autoLoad');
 
-$environment = \Your\Environment\EnvironmentManager::getInstance();
+$environment = \YT\Environment\EnvironmentManager::getInstance();
 
 foreach ($environment->getConfigFileNames() as $fileName) {
 	$fileName = sprintf('%s/config/%s.php', __DIR__, $fileName);
