@@ -1,141 +1,68 @@
-<div class="main-slider">
-                <div class="main-slider__wrap">
-                    <div class="main-slider__gallery">
-                        <ul class="main-slider__list">
-                            <li class="main-slider__item">
-                                <div class="main-slider__inner" style="background-image: url(sp_images/pages-id1-gallery.jpg);"></div>
-                                <div class="main-slider__img">
-                                    <img src="sp_images/pages-id1-gallery.jpg" alt="" />
-                                </div>
-                                <div class="main-slider__content">
-                                    <div class="main-slider__content-inner">
-                                        <h1><span>Бутик-отель <br> «Морской Клуб»</span></h1>
-                                        <p>Уникальный отель<br /> на Черноморском побережье<br /> Краснодарского края.<br /> Первая береговая линия,<br /> собственный пляж в открытом<br /> море и причал для яхт.<br /> Отель &laquo;Морской Клуб&raquo;<br /> идеальное место<br /> для семейного отдыха<br /> и проведения<br /> индивидуальных торжеств<br /> и значимых событий.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="main-slider__item">
-                                <div class="main-slider__inner" style="background-image: url(sp_images/pages-id41-gallery.jpg);"></div>
-                                <div class="main-slider__img">
-                                    <img src="sp_images/pages-id41-gallery.jpg" alt="" />
-                                </div>
-                                <div class="main-slider__content">
-                                    <div class="main-slider__content-inner">
-                                        <h1><span>Номерной фонд</span></h1>
-                                        <p>Двухместные или двухуровневые 
-                                            <br>номера  с двумя спальнями 
-                                            <br>с балконом и видом 
-                                            <br>на море или сад. 
-                                            <br>Лучшие дизайнеры постарались 
-                                            <br>воплотить  авторский, 
-                                            <br>неповторимый  стиль в интерьере. 
-                                            <br>В каждом номере 
-                                            <br>мебель ручной работы 
-                                            <br>из красного дерева, 
-                                            <br>индивидуальная  система 
-                                            <br>кондиционирования, мини-бар, 
-                                            <br>кофейный набор,  спутниковое TV, 
-                                            <br>WI-Fi,  санузел душ/ванная, 
-                                            <br>туалет/биде,  умывальник, 
-                                            <br>фен, элитная косметика, 
-                                            <br>халаты, тапочки, полотенца.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="main-slider__item">
-                                <div class="main-slider__inner" style="background-image: url(sp_images/pages-id3-gallery.jpg);"></div>
-                                <div class="main-slider__img">
-                                    <img src="sp_images/pages-id3-gallery.jpg" alt="" />
-                                </div>
-                                <div class="main-slider__content">
-                                    <div class="main-slider__content-inner">
-                                        <h1><span>Европейский сервис</span></h1>
-                                        <p>Уборка номера — ежедневно
-                                            <br>Смена полотенец — ежедневно
-                                            <br>Смена постельного белья — каждые три дня
-                                            <br>Круглосуточный room-service
-                                            <br>Быстрое оформление и заселение гостей
-                                            <br>Доставка багажа в номер
-                                            <br>VIP - трансфер для гостей
-                                            <br>Прачечная
-                                            <br>Детский клуб «Морячок»
-                                            <br>Анимация
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="main-slider__item">
-                                <div class="main-slider__inner" style="background-image: url(sp_images/pages-id46-gallery.jpg);"></div>
-                                <div class="main-slider__img">
-                                    <img src="sp_images/pages-id46-gallery.jpg" alt="" />
-                                </div>
-                                <div class="main-slider__content">
-                                    <div class="main-slider__content-inner">
-                                        <h1><span>Территория отеля</span></h1>
-                                        <p>- Основное здание
-                                            <br>- Коттеджи
-                                            <br>- Летняя терраса
-                                            <br>- Открытый бассейн с подогревом
-                                            <br>- Душевые комнаты
-                                            <br>- Аква-бар
-                                            <br>- Финская сауна
-                                            <br>- Арома-джакузи
-                                            <br>- Беседка для барбекю
-                                            <br>- Винный погреб
-                                            <br>- Маяк
-                                            <br>- Смотровая площадка
-                                            <br>- Солярий
-                                            <br>- Собственный пляж в открытом море
-                                            <br>- Причал для яхт
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="main-slider__item">
-                                <div class="main-slider__inner" style="background-image: url(sp_images/pages-id44-gallery.jpg);"></div>
-                                <div class="main-slider__img">
-                                    <img src="sp_images/pages-id44-gallery.jpg" alt="" />
-                                </div>
-                                <div class="main-slider__content">
-                                    <div class="main-slider__content-inner">
-                                        <h1><span>Услуги</span></h1>
-                                        <p>Аренда катера или яхты
-                                            <br>Морская рыбалка
-                                            <br>Водные развлечения
-                                            <br>Экскурсионные программы
-                                            <br>Организация частных мероприятий
-                                            <br>Бизнес-услуги
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="main-slider__item">
-                                <div class="main-slider__inner" style="background-image: url(sp_images/pages-id45-gallery.jpg);"></div>
-                                <div class="main-slider__img">
-                                    <img src="sp_images/pages-id45-gallery.jpg" alt="" />
-                                </div>
-                                <div class="main-slider__content">
-                                    <div class="main-slider__content-inner">
-                                        <h1><span> VIP</span></h1>
-                                        <p>В нашем отеле мы 
-                                            <br>предоставляем гостям 
-                                            <br>эксклюзивную услугу assistant. 
-                                            <br>Индивидуальное решение 
-                                            <br>любого  вопроса, 
-                                            <br>будь то бронирование 
-                                            <br>авиабилета, обмен валюты, 
-                                            <br>доставка цветов, 
-                                            <br>организация различных 
-                                            <br>приятных сюрпризов и мелочей.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- main-slider -->
+<?
+// Список новостей - http://dev.1c-bitrix.ru/user_help/content/iblock/components_2/news/news_list.php
+$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"slider-main",
+	array(
+		"AJAX_MODE" => "N",
+		"IBLOCK_TYPE" => "dynamic_content",
+		"IBLOCK_ID" => "1",
+		"NEWS_COUNT" => "99",
+		"SORT_BY1" => "SORT",
+		"SORT_ORDER1" => "ASC",
+		"SORT_BY2" => "",
+		"SORT_ORDER2" => "",
+		"FILTER_NAME" => "",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"SET_TITLE" => "N",
+		"SET_STATUS_404" => "N",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "36000000",
+		"CACHE_NOTES" => "",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"PAGER_TITLE" => "Новости",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => "",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"COMPONENT_TEMPLATE" => ".default",
+		"SET_BROWSER_TITLE" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"INCLUDE_SUBSECTIONS" => "N",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"SHOW_404" => "N",
+		"MESSAGE_404" => ""
+	),
+	false
+);
+?>
