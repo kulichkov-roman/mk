@@ -14,8 +14,7 @@ define('STOP_STATISTICS', true);
 define('SITE_ID', 's1');
 
 if (empty($_SERVER['DOCUMENT_ROOT'])) {
-	$_SERVER['HTTP_HOST'] = 'ksk.kulichkov.pro';
-	$_SERVER['DOCUMENT_ROOT'] = realpath(__DIR__ . '/../mk/');
+	$_SERVER['DOCUMENT_ROOT'] = realpath(__DIR__ . '/../../');
 }
 
 require $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_before.php';
@@ -71,6 +70,8 @@ class CreateHeroSliderIBlockMigration extends AbstractIBlockMigration
 	 */
 	public function down()
 	{
+		$environment = \YT\Environment\EnvironmentManager::getInstance();
+
 		$logger = new \YT\Tools\Logger\EchoLogger();
 
 		$this->deleteIBlock($environment->get('sliderMainIBlockId'));

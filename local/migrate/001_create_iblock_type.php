@@ -4,7 +4,7 @@
  *
  * @global $APPLICATION CMain
  */
-use Your\Tools\Data\Migration\Bitrix\AbstractIBlockMigration;
+use YT\Tools\Data\Migration\Bitrix\AbstractIBlockMigration;
 
 define('BX_BUFFER_USED', true);
 define('NO_KEEP_STATISTIC', true);
@@ -14,7 +14,6 @@ define('STOP_STATISTICS', true);
 define('SITE_ID', 's1');
 
 if (empty($_SERVER['DOCUMENT_ROOT'])) {
-	$_SERVER['HTTP_HOST'] = 'ksk.kulichkov.pro';
 	$_SERVER['DOCUMENT_ROOT'] = realpath(__DIR__ . '/../../');
 }
 
@@ -41,7 +40,7 @@ class CreateInfoIBlockTypeMigration extends AbstractIBlockMigration
 	 */
 	public function up()
 	{
-		$logger = new \Your\Tools\Logger\EchoLogger();
+		$logger = new \YT\Tools\Logger\EchoLogger();
 
 		try {
 			$this->createIBlockType(
@@ -62,7 +61,7 @@ class CreateInfoIBlockTypeMigration extends AbstractIBlockMigration
 			);
 
 			$logger->log('IBlock type "Dynamic content" has been created');
-		} catch (\Your\Exception\Data\Migration\MigrationException $exception) {
+		} catch (\YT\Exception\Data\Migration\MigrationException $exception) {
 			$logger->log(sprintf('ERROR: %s', $exception->getMessage()));
 		}
 	}
@@ -72,13 +71,13 @@ class CreateInfoIBlockTypeMigration extends AbstractIBlockMigration
 	 */
 	public function down()
 	{
-		$logger = new \Your\Tools\Logger\EchoLogger();
+		$logger = new \YT\Tools\Logger\EchoLogger();
 
 		try {
 			$this->deleteIBlockType('info');
 
 			$logger->log('IBlock type "Dynamic content" has been deleted');
-		} catch (\Your\Exception\Data\Migration\MigrationException $exception) {
+		} catch (\YT\Exception\Data\Migration\MigrationException $exception) {
 			$logger->log(sprintf('ERROR: %s', $exception->getMessage()));
 		}
 	}
