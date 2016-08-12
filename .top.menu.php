@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+    Array(
+        "Об отеле",
+        "/about/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Номера",
+        "/rooms/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Рестораны",
+        "/restaurant/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Фотогалерея",
+        "/gallery/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Мероприятия",
+        "/events/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Цены",
+        "/offers/",
+        Array(),
+        Array(),
+        ""
+    )
+);
+?>
