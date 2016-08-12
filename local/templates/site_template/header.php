@@ -8,32 +8,39 @@ IncludeTemplateLangFile(__FILE__);
 <!DOCTYPE html>
 <html class="no-js" lang="<?=LANGUAGE_ID?>">
 <head>
-	<meta name="viewport" content="width=1200">
 	<meta name="ktoprodvinul" content="f23be9b2b6271327">
 	<meta name="cmsmagazine" content="38d2170328e981e4d60ee986faaa509f">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
 	<title><?$APPLICATION->ShowTitle()?></title>
 	<?
 	CJSCore::Init();
 
+	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/normalize.css');
+	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/swiper.min.css');
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/fancybox/jquery.fancybox.css');
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/fancybox/helpers/jquery.fancybox-buttons.css');
-	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/style.css');
+	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/main.css');
+	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/skyslider.css');
+	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/fonts/hagin/stylesheet.css');
+	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/fonts/helvetica/stylesheet.css');
+	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/developers.css');
 
-	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery-1.11.3.min.js');
-	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery.validate-1.14.0.min.js');
-	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery.maskedinput.1.4.0.min.js');
-	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery.fancybox.pack.js');
-	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/css/fancybox/helpers/jquery.fancybox-buttons.js');
+	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/modernizr-2.8.3.min');
+
+	// is main page
+	$isMain = false;
+	if ($APPLICATION->GetCurPage(true)==SITE_DIR.'index.php') {
+		$isMain = true;
+	}
 
 	$APPLICATION->AddHeadString('
 		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	');
 
-	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/script.js');
+	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/developers.js');
 	?>
-	<!--[if lt IE 9]>
-		<script src="js/html5shiv.min.js"></script>
-	<![endif]-->
+
 	<?$APPLICATION->ShowHead()?>
 	<?$APPLICATION->IncludeComponent('bitrix:main.include', '',
 		Array(
@@ -45,7 +52,7 @@ IncludeTemplateLangFile(__FILE__);
 	);?>
 </head>
 <body>
-	<?$APPLICATION->ShowPanel();?>
+
 	<?$APPLICATION->IncludeComponent('bitrix:main.include', '',
 		Array(
 			'AREA_FILE_SHOW' => 'file',
@@ -54,6 +61,79 @@ IncludeTemplateLangFile(__FILE__);
 		),
 		false
 	);?>
+	<div class="header clearfix">
+		<?$APPLICATION->ShowPanel();?>
+		<div class="header-logo">
+			<a href="" class="header-logo__link">
+				<?$APPLICATION->IncludeComponent('bitrix:main.include', '',
+					Array(
+						'AREA_FILE_SHOW' => 'file',
+						'PATH' => '/local/include/site_templates/hd_logo.php',
+						'EDIT_TEMPLATE' => ''
+					),
+					false
+				);?>
+			</a>
+		</div>
+		<div class="header-main">
+			<div class="header-phone">
+				<?$APPLICATION->IncludeComponent('bitrix:main.include', '',
+					Array(
+						'AREA_FILE_SHOW' => 'file',
+						'PATH' => '/local/include/site_templates/hd_phone.php',
+						'EDIT_TEMPLATE' => ''
+					),
+					false
+				);?>
+			</div>
+			<div class="header-btns">
+				<?$APPLICATION->IncludeComponent('bitrix:main.include', '',
+					Array(
+						'AREA_FILE_SHOW' => 'file',
+						'PATH' => '/local/include/site_templates/hd_btns.php',
+						'EDIT_TEMPLATE' => ''
+					),
+					false
+				);?>
+			</div>
+			<?$APPLICATION->IncludeComponent('bitrix:main.include', '',
+				Array(
+					'AREA_FILE_SHOW' => 'file',
+					'PATH' => '/local/include/site_templates/hd_menu.php',
+					'EDIT_TEMPLATE' => ''
+				),
+				false
+			);?>
+		</div>
+		<a href="javascript:void(0)" class="header__btn-menu-toggle js__header-menu-toggle"></a>
+	</div>
+	<div id='mobile-mode'></div>
+	<div id='wrapper'>
+	<?if($isMain){?>
+		<?$APPLICATION->IncludeComponent('bitrix:main.include', '',
+			Array(
+				'AREA_FILE_SHOW' => 'file',
+				'PATH' => '/local/include/site_templates/hd_slider_main.php',
+				'EDIT_TEMPLATE' => ''
+			),
+			false
+		);?>
+	<?}?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<div class="wrapper">
 		<header class="page-header">
 			<div class="container">

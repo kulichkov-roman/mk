@@ -3,6 +3,9 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 	die();
 }
 ?>
+
+		</div> <!--/wrapper-->
+
 		<footer class="page-footer">
 			<div class="container">
 				<div class="footer-copyright">
