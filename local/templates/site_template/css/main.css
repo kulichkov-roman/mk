@@ -157,10 +157,10 @@ html, body {
 .header {
     min-width: 320px;
     position: fixed;
-    top: 0px;
+    /*top: 0px;*/
     left: 0px;
     padding-top: 10px;
-    z-index: 90000;
+    z-index: 900;
     width: 100%;
     min-height: 90px;
     background-color: #fff;
@@ -534,7 +534,7 @@ footer {
     background-color: #000;
     position: absolute;
     bottom: 0;
-    background: #000 url(images/footerback.jpg) center top no-repeat;
+    background: #000 url(/local/images/footerback.jpg) center top no-repeat;
     z-index: 2000;
     text-align: left;
     -webkit-box-sizing: border-box;

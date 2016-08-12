@@ -1,4 +1,4 @@
 /*Customs css*/
-.header {
-    z-index: 1;
+.panel {
+    z-index: 90000;
 }
