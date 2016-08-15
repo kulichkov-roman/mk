@@ -19,13 +19,12 @@ $this->setFrameMode(true);
 		$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 		?>
 		<li class='hidden-item hidden-hover hidden-link' id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+			<div class='slider-back' style='background-image:url(<?=$arItem['PREVIEW_PICTURE']['SRC']?>);'></div>
 			<div class='hover'>
 				<div>
-					<h1><?=$arItem['NAME']?></h1>
-					<?if($arItem['PREVIEW_TEXT'] <> ''){?>
-						<?=$arItem['PREVIEW_TEXT']?>
-						<a class='readmore' href='<?=$arItem['DETAIL_PAGE_URL']?>'>подробнее</a>
-					<?}?>
+					<h1><?=$arItem['NAME']?></h1><br>
+					<?=$arItem['PREVIEW_TEXT'] <> '' ? $arItem['PREVIEW_TEXT'] : '';?>
+					<a class='readmore' href='<?=$arItem['DETAIL_PAGE_URL']?>'>подробнее</a>
 				</div>
 			</div>
 		</li>
