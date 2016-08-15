@@ -6,8 +6,10 @@
 	new \YT\Environment\Configuration\CommonConfiguration(
 		array(
 			'sliderMainIBlockId' => 1,
+			'roomsIBlockId'      => 2,
 			// Заглушка для слайдера на главной
 			'sliderMainPlugId'   => 9999,
+			'roomsPlugId'        => 9998,
 		)
 	)
 );
@@ -21,5 +23,12 @@ if(\Bitrix\Main\Loader::includeModule('itconstruct.resizer'))
             'type' => 'jpg'
         )
     );
+	itc\Resizer::addPreset('roomsPreview', array(
+			'mode' => 'width',
+			'width' => '1280',
+			'height' => null,
+			'type' => 'jpg'
+		)
+	);
 }
 

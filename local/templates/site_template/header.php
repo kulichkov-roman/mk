@@ -136,3 +136,4 @@ IncludeTemplateLangFile(__FILE__);
 	</div>
 	<div id="mobile-mode"></div>
 	<div id="wrapper">
+		

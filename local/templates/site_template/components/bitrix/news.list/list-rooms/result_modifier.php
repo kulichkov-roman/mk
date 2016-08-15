@@ -1,7 +1,7 @@
 <?if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true)die();?>
 
 <?
-$environment = \Your\Environment\EnvironmentManager::getInstance();
+$environment = \YT\Environment\EnvironmentManager::getInstance();
 
 $arIds = array();
 foreach($arResult['ITEMS'] as &$arItem)
@@ -32,11 +32,9 @@ if(sizeof($arIds) > 0)
     while($arItem = $rsFile->GetNext())
     {
         $arPreviewPicture[$arItem['ID']] = $arItem;
-        $urlPreviewPicture = itc\Resizer::get($arItem['ID'], 'catalogSmfPreview');
-        $urlDetailPicture  = itc\Resizer::get($arItem['ID'], 'rewardsMainDetail');
+        $urlPreviewPicture = itc\Resizer::get($arItem['ID'], 'roomsPreview');
 
         $arPreviewPicture[$arItem['ID']]['SRC'] = $urlPreviewPicture;
-        $arDetailPicture[$arItem['ID']]['SRC']  = $urlDetailPicture;
     }
 
     foreach($arResult['ITEMS'] as &$arItem)
@@ -44,13 +42,11 @@ if(sizeof($arIds) > 0)
         if(!$arItem['PREVIEW_PICTURE']['SRC'] == '')
         {
             $arItem['PREVIEW_PICTURE']['SRC'] = $arPreviewPicture[$arItem['PREVIEW_PICTURE']['ID']]['SRC'];
-            $arItem['DETAIL_PICTURE']['SRC']  = $arDetailPicture[$arItem['PREVIEW_PICTURE']['ID']]['SRC'];
 
         }
         else
         {
-            $arItem['PREVIEW_PICTURE']['SRC'] = itc\Resizer::get($environment->get('advantageMainPlugId'), 'advantageMainPreview');
-            $arItem['DETAIL_PICTURE']['SRC']  = itc\Resizer::get($environment->get('advantageMainPlugId'), 'rewardsMainDetail');
+            $arItem['PREVIEW_PICTURE']['SRC'] = itc\Resizer::get($environment->get('roomsPlugId'), 'roomsPreview');
         }
     }
     unset($arItem);
@@ -59,8 +55,7 @@ else
 {
     foreach($arResult['ITEMS'] as &$arItem)
     {
-        $arItem['PREVIEW_PICTURE']['SRC'] = itc\Resizer::get($environment->get('advantageMainPlugId'), 'advantageMainPreview');
-        $arItem['DETAIL_PICTURE']['SRC'] = itc\Resizer::get($environment->get('advantageMainPlugId'), 'rewardsMainDetail');
+        $arItem['PREVIEW_PICTURE']['SRC'] = itc\Resizer::get($environment->get('roomsPlugId'), 'roomsPreview');
     }
     unset($arItem);
 }
