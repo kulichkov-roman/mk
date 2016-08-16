@@ -26,12 +26,15 @@ IncludeTemplateLangFile(__FILE__);
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/fonts/helvetica/stylesheet.css');
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/developers.css');
 
-	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/vendor/modernizr-2.8.3.min');
-
 	// is main page
 	$isMain = false;
 	if ($APPLICATION->GetCurPage(true)==SITE_DIR.'index.php') {
 		$isMain = true;
+	}
+	// is gallery page
+	$isGallery = false;
+	if (strpos($APPLICATION->GetCurPage(true), SITE_DIR.'gallery/') !== false) {
+		$isGallery = true;
 	}
 
 	$APPLICATION->AddHeadString('
@@ -44,6 +47,7 @@ IncludeTemplateLangFile(__FILE__);
         </script>
 
 	');
+
 	$APPLICATION->AddHeadString('
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>window.jQuery || document.write(\''.SITE_TEMPLATE_PATH .'<script src="/js/vendor/jquery-1.11.3.min.js"><\/script>\')</script>
@@ -56,6 +60,7 @@ IncludeTemplateLangFile(__FILE__);
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/swiper.min.js');
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/css/fancybox/helpers/jquery.fancybox-buttons.js');
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/main.js');
+	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/vendor/modernizr-2.8.3.min.js');
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/developers.js');
 
 	$APPLICATION->AddHeadString('
@@ -136,4 +141,3 @@ IncludeTemplateLangFile(__FILE__);
 	</div>
 	<div id="mobile-mode"></div>
 	<div id="wrapper">
-		

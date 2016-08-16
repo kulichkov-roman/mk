@@ -36,10 +36,10 @@ if($id <> '')
 }
 ?>
 <?$this->SetViewTarget('roomsDetail');?>
-<div class="page-header" style="min-height: 400px;">
-    <div style="background-image: url(<?=$arResult['DETAIL_PICTURE']['SRC']?>)">
-        <h1><?=$arResult['NAME']?></h1>
-        <a class="page-back-button" href="<?=$environment->get('roomsDir')?>"></a>
+    <div class="page-header" style="min-height: 400px;">
+        <div style="background-image: url(<?=$arResult['DETAIL_PICTURE']['SRC']?>)">
+            <h1><?=$arResult['NAME']?></h1>
+            <a class="page-back-button" href="<?=$environment->get('roomsDir')?>"></a>
+        </div>
     </div>
-</div>
 <?$this->EndViewTarget();?>

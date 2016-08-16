@@ -1,6 +1,9 @@
-<?php
-if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
-	die();
+<?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {die();}
+
+// is gallery page
+$isGallery = false;
+if (strpos($APPLICATION->GetCurPage(true), SITE_DIR.'gallery/') !== false) {
+	$isGallery = true;
 }
 ?>
 		</div> <!--/wrapper-->
@@ -38,4 +41,11 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 			);?>
 		</footer>
 	</body>
+	<?
+	// @todo в шапке не работает
+	if($isGallery) {?>
+		<script>
+			initImagesSlider("#gallery-slider");
+		</script>
+	<?}?>
 </html>
