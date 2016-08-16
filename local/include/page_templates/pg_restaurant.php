@@ -3,7 +3,7 @@
     // Список новостей - http://dev.1c-bitrix.ru/user_help/content/iblock/components_2/news/news_list.php
     $APPLICATION->IncludeComponent(
     	"bitrix:news.list",
-    	"list-restaurants",
+    	"slider-restaurants",
     	array(
     		"AJAX_MODE" => "N",
     		"IBLOCK_TYPE" => "dynamic_content",

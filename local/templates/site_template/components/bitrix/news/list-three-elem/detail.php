@@ -56,7 +56,7 @@ $environment = \YT\Environment\EnvironmentManager::getInstance();
 		);?>
 		<?$ElementID = $APPLICATION->IncludeComponent(
 			"bitrix:news.detail",
-			"detail-rooms",
+			"detail-elem",
 			Array(
 				"DISPLAY_DATE" => $arParams["DISPLAY_DATE"],
 				"DISPLAY_NAME" => $arParams["DISPLAY_NAME"],

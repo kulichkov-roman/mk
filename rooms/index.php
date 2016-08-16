@@ -7,7 +7,7 @@ $APPLICATION->SetTitle("Бутик-отель Морской Клуб (Sea Club 
 <?// Новости (комплексный компонент) - http://dev.1c-bitrix.ru/user_help/content/iblock/components_2/news/news.php
 $APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	"rooms",
+	"list-three-elem",
 	array(
 		"SEF_MODE" => "Y",
 		"AJAX_MODE" => "N",
