@@ -1,7 +1,7 @@
 <?if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true)die();?>
 
 <?
-$environment = \Your\Environment\EnvironmentManager::getInstance();
+$environment = \YT\Environment\EnvironmentManager::getInstance();
 
 $arIds = array();
 foreach($arResult['ITEMS'] as &$arItem)
@@ -32,8 +32,8 @@ if(sizeof($arIds) > 0)
     while($arItem = $rsFile->GetNext())
     {
         $arPreviewPicture[$arItem['ID']] = $arItem;
-        $urlPreviewPicture = itc\Resizer::get($arItem['ID'], 'advantageMainPreview');
-        $urlDetailPicture  = itc\Resizer::get($arItem['ID'], 'rewardsMainDetail');
+        $urlPreviewPicture = itc\Resizer::get($arItem['ID'], 'w1280');
+        $urlDetailPicture  = itc\Resizer::get($arItem['ID'], 'w1280');
 
         $arPreviewPicture[$arItem['ID']]['SRC'] = $urlPreviewPicture;
         $arDetailPicture[$arItem['ID']]['SRC']  = $urlDetailPicture;
@@ -49,8 +49,8 @@ if(sizeof($arIds) > 0)
         }
         else
         {
-            $arItem['PREVIEW_PICTURE']['SRC'] = itc\Resizer::get($environment->get('advantageMainPlugId'), 'advantageMainPreview');
-            $arItem['DETAIL_PICTURE']['SRC']  = itc\Resizer::get($environment->get('advantageMainPlugId'), 'rewardsMainDetail');
+            $arItem['PREVIEW_PICTURE']['SRC'] = itc\Resizer::get($environment->get('w1280PlugId'), 'w1280');
+            $arItem['DETAIL_PICTURE']['SRC']  = itc\Resizer::get($environment->get('w1280PlugId'), 'w1280');
         }
     }
     unset($arItem);
@@ -59,8 +59,8 @@ else
 {
     foreach($arResult['ITEMS'] as &$arItem)
     {
-        $arItem['PREVIEW_PICTURE']['SRC'] = itc\Resizer::get($environment->get('advantageMainPlugId'), 'advantageMainPreview');
-        $arItem['DETAIL_PICTURE']['SRC'] = itc\Resizer::get($environment->get('advantageMainPlugId'), 'rewardsMainDetail');
+        $arItem['PREVIEW_PICTURE']['SRC'] = itc\Resizer::get($environment->get('w1280PlugId'), 'w1280');
+        $arItem['DETAIL_PICTURE']['SRC'] = itc\Resizer::get($environment->get('w1280PlugId'), 'w1280');
     }
     unset($arItem);
 }

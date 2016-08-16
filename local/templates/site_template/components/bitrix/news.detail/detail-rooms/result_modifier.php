@@ -9,7 +9,7 @@ if(is_array($arResult['DETAIL_PICTURE']))
 }
 else
 {
-    $arResult['DETAIL_PICTURE']['SRC'] = itc\Resizer::get($environment->get('roomsPlugId'), 'roomsDetail');
+    $arResult['DETAIL_PICTURE']['SRC'] = itc\Resizer::get($environment->get('roomsPlugId'), 'w1280');
 }
 
 if($id <> '')
@@ -29,7 +29,7 @@ if($id <> '')
     if($arItem = $rsFile->GetNext())
     {
         $arDetailPicture[$arItem['ID']] = $arItem;
-        $urlDetailPicture = itc\Resizer::get($arItem['ID'], 'roomsDetail');
+        $urlDetailPicture = itc\Resizer::get($arItem['ID'], 'w1280');
 
         $arResult['DETAIL_PICTURE']['SRC'] = $urlDetailPicture;
     }

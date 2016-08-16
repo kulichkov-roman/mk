@@ -7,36 +7,22 @@
 		array(
 			'sliderMainIBlockId' => 1,
 			'roomsIBlockId'      => 2,
+			'restaurantIBlockId' => 3,
 			'roomsDir'           => '/rooms/',
 			// Заглушка для слайдера на главной
-			'sliderMainPlugId'   => 9999,
-			'roomsPlugId'        => 9998,
+			'w1280PlugId'        => 21
 		)
 	)
 );
 
 if(\Bitrix\Main\Loader::includeModule('itconstruct.resizer'))
 {
-    itc\Resizer::addPreset('sliderMain', array(
+    itc\Resizer::addPreset('w1280', array(
             'mode' => 'width',
             'width' => '1280',
             'height' => null,
             'type' => 'jpg'
         )
     );
-	itc\Resizer::addPreset('roomsPreview', array(
-			'mode' => 'width',
-			'width' => '1280',
-			'height' => null,
-			'type' => 'jpg'
-		)
-	);
-	itc\Resizer::addPreset('roomsDetail', array(
-			'mode' => 'width',
-			'width' => '1280',
-			'height' => null,
-			'type' => 'jpg'
-		)
-	);
 }
 

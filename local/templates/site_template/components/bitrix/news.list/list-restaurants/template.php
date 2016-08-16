@@ -13,30 +13,21 @@
 $this->setFrameMode(true);
 ?>
 
-<section class="feed">
-	<?$index  = 0;?>
+<ul>
 	<?foreach($arResult["ITEMS"] as $arItem){
 		$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 		$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 		?>
-		<article class="feed__item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-			<figure class="feed__img-h">
-				<a href="<?=$arItem['DETAIL_PICTURE']['SRC']?>"
-				   data-header="<?=$arItem['NAME']?>" title="<?=$arItem['DETAIL_PICTURE']['DESCRIPTION']?>"
-				   rel="fancybox-feed" class="feed__img-link _fancybox">
-					<img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arItem['PREVIEW_PICTURE']['DESCRIPTION']?>" class="feed__img">
-				</a>
-			</figure>
-			<div class="feed__content _bg-<?=$index?>">
-				<h2 class="feed__title"><?=$arItem['NAME']?></h2>
-				<?if($arItem['PREVIEW_TEXT'] <> ''){?>
-					<div class="feed__text">
+		<li id="<?=$this->GetEditAreaId($arItem['ID']);?>" style="z-index: 100;" class="active">
+			<div class="slider-back" style="background-image: url(<?=$arItem['DETAIL_PICTURE']['SRC']?>);"></div>
+			<div class="slider-hover-block slider-hover-hidden">
+				<div>
+					<h1><span><?=$arItem['NAME']?></span></h1>
+					<?if($arItem['PREVIEW_TEXT'] <> ''){?>
 						<?=$arItem['PREVIEW_TEXT']?>
-					</div>
-				<?}?>
+					<?}?>
+				</div>
 			</div>
-		</article>
-		<?$index++;?>
+		</li>
 	<?}?>
-	<button type="button" class="feed__photos-btn">Смотреть все фотографии</button>
-</section>
+</ul>
