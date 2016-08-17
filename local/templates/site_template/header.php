@@ -96,7 +96,7 @@ IncludeTemplateLangFile(__FILE__);
 	</div>
 	<div class="header clearfix">
 		<div class="header-logo">
-			<a href="" class="header-logo__link">
+			<a href="/" class="header-logo__link">
 				<?$APPLICATION->IncludeComponent('bitrix:main.include', '',
 					Array(
 						'AREA_FILE_SHOW' => 'file',

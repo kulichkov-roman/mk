@@ -7,7 +7,7 @@ $APPLICATION->SetTitle("Бутик-отель Морской Клуб (Sea Club 
 <?// Новости (комплексный компонент) - http://dev.1c-bitrix.ru/user_help/content/iblock/components_2/news/news.php
 $APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	"list-three-elem",
+	"list-three-elem", 
 	array(
 		"SEF_MODE" => "Y",
 		"AJAX_MODE" => "N",
@@ -56,8 +56,8 @@ $APPLICATION->IncludeComponent(
 		"DETAIL_PAGER_SHOW_ALL" => "N",
 		"SET_TITLE" => "N",
 		"SET_STATUS_404" => "N",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-		"ADD_SECTIONS_CHAIN" => "N",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
 		"USE_PERMISSIONS" => "N",
 		"CACHE_TYPE" => "A",
 		"CACHE_TIME" => "36000000",
@@ -77,9 +77,9 @@ $APPLICATION->IncludeComponent(
 		"AJAX_OPTION_STYLE" => "Y",
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "list-three-elem",
 		"SET_LAST_MODIFIED" => "N",
-		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
