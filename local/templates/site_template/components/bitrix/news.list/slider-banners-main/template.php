@@ -20,7 +20,7 @@ $this->setFrameMode(true);
 		?>
 		<li class="index-banners__item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 			<div class="index-banners__inner">
-				<a href="/offers/svadba-na-beregu-morya/" class="index-banner__link">
+				<a href="<?=$arItem['PROPERTIES']['LINK']['VALUE'] <> '' ? $arItem['PROPERTIES']['LINK']['VALUE'] : 'javascript:void(0)'?>" class="index-banner__link">
 					<img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arItem['NAME']?>" title="<?=$arItem['NAME']?>" />
 				</a>
 			</div>
