@@ -1,4 +1,4 @@
-/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+    /*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -1420,6 +1420,311 @@ a.book-button:after {
 
 /*--------- begin end banners ----------*/
 
+.container {
+    max-width: 940px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/*------------ begin forms -----------*/
+
+.form__list {
+    margin: 0;
+    padding: 0;
+}
+.form__item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin: 5px 0 0 0;
+}
+.form__item:before {
+    content: none;
+}
+.form__item:first-child {
+    margin-top: 0;
+}
+.form__item_btn {
+    margin-top: 20px;
+    text-align: right;
+}
+.form__header {
+    margin-bottom: 20px;
+    font-family: 'hagin_caps_mediumregular', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 38px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.form__title {
+    margin-bottom: 20px;
+    font-family: 'helvetica_neueregular', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+}
+.form__input_text, 
+.form__textarea {
+    width: 100%;
+    height: 48px;
+    padding: 0 10px;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'helvetica_neueregular', Arial, Helvetica, sans-serif;
+    background: #fff;
+    border: 1px solid #edf1f2;
+    box-shadow: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+.form__textarea {
+    height: 140px;
+    padding: 10px;
+    resize: none;
+}
+.form__label_block {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: 'helvetica_neueregular', Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+/*------------- end forms ------------*/
+
+/*--------- begin reviews --------*/
+
+.page-reviews .page-header > div {
+    background-position: center 22%;
+}
+
+.reviews * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.reviews h1 {
+    margin-bottom: 30px;
+    color: #222;
+}
+.reviews__list {
+    margin: 0 -10px;
+    padding: 0;
+}
+.form__list * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.reviews__item {
+    width: 50%;
+    float: left;
+    margin: 0;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    list-style: none;
+}
+.reviews__sizer {
+    width: 50%;
+    padding: 0 10px;
+}
+.reviews__inner {
+    padding: 60px 50px;
+    background-color: #fff;
+    border: 1px solid rgba(27, 51, 60, 0.27);
+}
+.reviews__item:nth-child(2n+1) .reviews__inner {
+    color: #fff;
+    background-color: #404040;
+}
+.reviews__info {
+    margin-bottom: 12px;
+}
+.reviews__date {
+    display: inline-block;
+    vertical-align: middle;
+    height: 25px;
+    margin-right: 10px;
+    padding: 0 15px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fffefe;
+    white-space: nowrap;
+    text-transform: uppercase;
+    background-color: #404040;
+}
+.reviews__item:nth-child(2n+1) .reviews__date {
+    color: #000;
+    background: #fff;
+}
+.reviews__info .reviews__rating {
+    float: right;
+    line-height: 25px;
+}
+.reviews__title {
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 30px;
+    font-family: 'hagin_caps_mediumregular', sans-serif;
+    text-transform: uppercase;
+}
+.reviews__text {
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'helvetica_neuelight', Arial, Helvetica, sans-serif;
+}
+
+.reviews-form {
+    margin-bottom: -200px;
+    padding: 45px 0 150px 0;
+    background: #191919;
+}
+
+.reviews-form .form__list {
+    margin: 0 -10px;
+}
+
+.reviews-form .form__item {
+    float: left;
+    width: 24.8%;
+    padding: 0 10px;
+    margin-top: 0;  
+}
+
+.reviews-form .form__item_rating,
+.reviews-form .form__item_btn {
+    margin-top: 40px;
+}
+
+.reviews-form .form__item_rating {
+    padding-top: 10px;
+}
+
+.reviews-form .form__item_textarea {
+    width: 48.67%;
+}
+
+.reviews-form__btn {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 48px;
+    padding: 0 50px 0 25px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 16px;
+    font-family: 'helvetica_neue', Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: left;
+    background: #56af31;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+.reviews-form__btn:after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 21px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 14px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAMAAAAYGszCAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA2FBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+0oG7xAAAAR3RSTlMAVv106PfzwKm1ufzuekPC3k1t5fCTElPtcw3y4SEQpCUIMQ4im2oZawNwfaNZSsgCTvGBJNr4OGP6+6V5jJj5z9WSsGiWl3FvRsAAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAmklEQVQY02XPRxaCAAwE0BFR7B0VsfdeULF3ce5/I5GHD5FskvxNJvAJ/C8/RI8xgKAUclM4IiIaiyeSDqXSmayAHCnnC0XblJJC5qCaY7lSlT9Uqzcks6kWkk20wlIbsBYbO+j2APQHQwdHGJOTqcrZfGGhRi5X6+9xfbMVqGG3Pxx/Y57Oug5eru7wtyBx9775AJ7Gy1WGgjepIDz7g9/buwAAAABJRU5ErkJggg==');
+}
+.reviews-form__btn:hover {
+    opacity: .8;
+}
+
+/*--------- end reviews ----------*/
+
+/*------------ begin rating ----------*/
+
+.rating {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.rating__list {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    width: 97px;
+    height: 16px;
+    white-space: nowrap;
+    background: url(../images/sprite-rating.png) 0 0 no-repeat;
+}
+.rating_0 .rating__list {
+    background-position: 0 0;
+}
+.rating_1 .rating__list {
+    background-position: 0 -16px;
+}
+.rating_2 .rating__list {
+    background-position: 0 -32px;
+}
+.rating_3 .rating__list {
+    background-position: 0 -48px;
+}
+.rating_4 .rating__list {
+    background-position: 0 -64px;
+}
+.rating_5 .rating__list {
+    background-position: 0 -80px;
+}
+.rating__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-right: 3px;
+    font-size: 14px;
+    width: 17px;
+    height: 15px;
+    line-height: 1;
+}
+.rating__item:before {
+    content: none;
+}
+.rating__item:before {
+    content: none;
+}
+.rating_state_active .rating__item {
+    cursor: pointer;
+}
+.rating__title {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 7px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+}
+.rating_state_active .rating__item {
+    cursor: pointer;
+}
+
+
+/*------------- end rating ------------*/
+
 /* ==========================================================================
    Media queries
    ========================================================================== */
@@ -1441,6 +1746,8 @@ a.book-button:after {
         font-size: 16px;
         line-height: 1.6em;
     }
+    
+    
 
 }
 
@@ -1459,6 +1766,10 @@ a.book-button:after {
     p {
         font-size: 15px;
         line-height: 1.6em;
+    }
+    
+    .reviews-form {
+        margin-bottom: -250px;
     }
 }
 
@@ -1632,7 +1943,29 @@ a.book-button:after {
     a.book-button {
         /*padding: 8px 30px 6px 20px;*/
     }
-
+    
+    .page-reviews .page-header > div {
+        background-position: center 0;
+    }
+    
+    .reviews-form .container {
+        max-width: 640px;
+    }
+    
+    .reviews-form .form__item {
+        width: 50%;
+        margin-top: 10px;
+    }
+     
+    .reviews-form .form__item_textarea {
+        width: 100%;
+        margin-top: 0;
+    }
+    
+    .reviews-form .form__item_rating,
+    .reviews-form .form__item_btn {
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -1719,6 +2052,9 @@ a.book-button:after {
     nav > ul li span {
         padding: 5px 0;
         line-height: 16px;
+    }
+    .page-wrapper {
+        margin-top: 0;
     }
     .main-slider {
         position: relative;
@@ -1822,6 +2158,12 @@ a.book-button:after {
         float: none;
         margin-right: 0;
         text-align: center;
+    }
+    .page-reviews .page-header > div {
+        background-position: center center;
+    }
+    .reviews-form {
+        margin-bottom: -150px;
     }
 }
 
@@ -2148,6 +2490,59 @@ a.book-button:after {
     }
 
 
+}
+
+@media screen and (max-width: 700px) {
+    
+    .reviews-form {
+        margin-bottom: -100px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    
+    .page-header {
+        min-height: 190px!important;
+    }
+    
+    .reviews-form .container {
+        max-width: 320px;
+    }
+    
+    .reviews__item {
+        float: none;
+        width: 100%;
+    }
+    
+    .reviews__inner {
+        padding: 30px 20px;
+    }
+    
+    .reviews__text,
+    .reviews__text p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    
+    .reviews-form .form__item {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .reviews-form .form__item_textarea {
+        margin-top: 0;
+    }
+    
+    .reviews-form .form__item_rating {
+        padding-top: 0;
+    }
+     
+    .reviews-form .form__item_rating {
+        margin-top: 10px;
+    }
+    .reviews-form .form__item_btn {
+        margin-top: 15px;
+    }
 }
 
 @media screen and (max-width: 550px) {

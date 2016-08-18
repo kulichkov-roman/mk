@@ -11,6 +11,7 @@
 			'galleryIBlockId'    => 4,
 			'eventsIBlockId'     => 5,
 			'pricesIBlockId'     => 6,
+			'reviewsIBlockId'    => 9,
 			'roomsDir'           => '/rooms/',
 			// Заглушка для слайдера на главной
 			'w1280PlugId'        => 21

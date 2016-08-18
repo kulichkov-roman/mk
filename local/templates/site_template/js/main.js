@@ -459,6 +459,52 @@ $(document).ready(function(){
             mainCarousel.slideNext();
         });
     });*/
+   
+    //rating 
+    
+    (function() {
+        
+        if ($('.rating_state_active').length > 0) {
+            var $ratingBlock = $('.rating_state_active');
+            var startRating = +$ratingBlock.attr('data-rating');
+            var currentRating = startRating;
+            var newRating;
+            
+            $ratingBlock.find('.rating__item').on('mouseenter', function(e) {
+                newRating = $(this).index() + 1;
+                $ratingBlock.removeClass('rating_' + currentRating).addClass('rating_' + newRating);
+                currentRating = newRating;
+                $(this).on('click', function(e) {
+                    $ratingBlock.removeClass('rating_state_active');
+                    $ratingBlock.attr('data-rating', $(this).index() + 1);
+                    $ratingBlock.find('.rating__item').off('mouseenter').off('click');
+                });
+                
+                $ratingBlock.find('.rating__list').on('mouseleave', function(e) {
+                    
+                    if ($ratingBlock.hasClass('rating_state_active')) {
+                        $ratingBlock.removeClass('rating_' + currentRating).addClass('rating_' + startRating);
+                        currentRating = startRating;
+                    }
+                    
+                });
+                
+            });
+        }
+        
+    })();
+    
+    // reviews massonry
+    
+    // purchase reviews masonry
+    
+    if ($('.reviews').length > 0) {
+        var $reviewsGrid = $('.reviews__list').masonry({
+            itemSelector: '.reviews__item',
+            columnWidth: '.reviews__sizer',
+            percentPosition: true
+        });
+    }
     
     $(window).resize(function() {
         $windowWidth = $window.width();

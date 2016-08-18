@@ -61,6 +61,7 @@ IncludeTemplateLangFile(__FILE__);
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/css/fancybox/helpers/jquery.fancybox-buttons.js');
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/main.js');
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/vendor/modernizr-2.8.3.min.js');
+	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/vendor/masonry.pkgd-4.0.0.min.js');
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/developers.js');
 
 	$APPLICATION->AddHeadString('
