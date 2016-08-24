@@ -183,9 +183,6 @@ setInterval('rotateMainSlider()',10000);
 // main slider
 
 function setMainSliderHeight() {
-    
-
-    
     var $galleryWrap = $('.main-slider__wrap');
     
     if ($(window).width() > 840) {
@@ -195,6 +192,20 @@ function setMainSliderHeight() {
         $galleryWrap.height(windowHeight - footerHeight - headerheight);
     } else {
         $galleryWrap.attr('style', '');
+    }
+    
+}
+
+function setSigthMapHeight() {
+    var $mapWrap = $('.sigth');
+    
+    if ($(window).width() > 840) {
+        var windowHeight = $(window).height();
+        var footerHeight = $('#wrapper > footer').height();
+        var headerheight = parseFloat($('.sigth').css('padding-top'));
+        $mapWrap.height(windowHeight - footerHeight - headerheight);
+    } else {
+        $mapWrap.attr('style', '');
     }
     
 }
@@ -477,6 +488,7 @@ $(document).ready(function(){
                 $(this).on('click', function(e) {
                     $ratingBlock.removeClass('rating_state_active');
                     $ratingBlock.attr('data-rating', $(this).index() + 1);
+                    $ratingBlock.find('input[type=hidden]').val($(this).index() + 1);
                     $ratingBlock.find('.rating__item').off('mouseenter').off('click');
                 });
                 
@@ -496,8 +508,6 @@ $(document).ready(function(){
     
     // reviews massonry
     
-    // purchase reviews masonry
-    
     if ($('.reviews').length > 0) {
         var $reviewsGrid = $('.reviews__list').masonry({
             itemSelector: '.reviews__item',
@@ -505,6 +515,102 @@ $(document).ready(function(){
             percentPosition: true
         });
     }
+    
+    // sigth map
+    
+    var sigthMap;
+    
+    var mapOptions = {
+            center : [44.520261679345154,38.229489521793354],
+            zoom : 12,
+            controls: [],
+            type : 'yandex#map'
+    };
+    
+    if ($windowWidth <= 840) {
+        mapOptions.zoom = 10;
+        mapOptions.controls = ['zoomControl'];
+    }
+    
+    
+    function initSigthMap() {
+        sigthMap = new ymaps.Map("sigthMap", mapOptions);
+        
+        if (typeof mapObjects === 'undefined') {
+            return false;
+        }
+        
+        var MyBalloonContentLayoutClass = ymaps.templateLayoutFactory.createClass(
+            '<div class="sigth-map-balloon">' +
+                '<div class="sigth-map-balloon__header">' +
+                    '<span class="sigth-map-balloon__header-text">{{ properties.title }}</span>' +
+                '</div>' +
+                '<div class="sigth-map-balloon__img-wrap">' +
+                    '<img class="sigth-map-balloon__img" src="{{ properties.img }}" alt="{{ properties.title }}">' +
+                '</div>' +
+                '<div class="sigth-map-balloon__action">' +
+                    '<a href="{{ properties.link }}" target="_blank">Подробнее</a>' +
+                '</div>' +
+            '</div>'
+        );
+        
+        var geoObjects = new ymaps.GeoObjectCollection(null);
+        
+        for (var i = 0; i < mapObjects.length; i++) {
+            var placemark = new ymaps.Placemark(
+                mapObjects[i].coords,
+                {
+                    id: mapObjects[i].id,
+                    title: mapObjects[i].title,
+                    img: mapObjects[i].img,
+                    link: mapObjects[i].link,
+                    group: mapObjects[i].group
+                }, {
+                    balloonContentLayout: MyBalloonContentLayoutClass,
+                    iconLayout: 'default#image',
+                    iconImageHref: mapObjects[i].icon,
+                    iconImageSize: [31, 45],
+                    iconImageOffset: [-15, -45]
+                }
+            );
+            
+            geoObjects.add(placemark);
+        }
+        
+        sigthMap.geoObjects.add(geoObjects);
+        
+        // Выставляем масштаб карты чтобы были видны все группы.
+        /*sigthMap.setBounds(sigthMap.geoObjects.getBounds(), {
+            checkZoomRange: true
+        });*/
+        
+        var result = ymaps.geoQuery(sigthMap.geoObjects);
+        
+        $(document).on('click', '.js__show-object-map', function(e) {
+            
+            if (typeof $(this).data('object-id') != 'undefined') {
+                var objectId = $(this).data('object-id');
+                var myResult = result.search('properties.id = "' + objectId + '"');
+            } else if (typeof $(this).data('object-group') != 'undefined') {
+                var objectGroup = $(this).data('object-group');
+                var myResult = result.search('properties.group = "' + objectGroup + '"');
+            }
+            
+            sigthMap.setBounds(myResult.getBounds(), {
+                checkZoomRange: true
+            });
+        });
+    }
+    
+    if (window.ymaps) {
+        
+        if (document.getElementById('sigthMap') != null) {
+            setSigthMapHeight();
+            ymaps.ready(initSigthMap);
+        }
+    }
+    
+    /*********************************************/
     
     $(window).resize(function() {
         $windowWidth = $window.width();
@@ -518,6 +624,10 @@ $(document).ready(function(){
         
         if ($('.main-slider__wrap').length > 0) {
             setMainSliderHeight();
+        }
+        
+        if ($('.sight').length > 0) {
+            setSigthMapHeight();
         }
         
     });

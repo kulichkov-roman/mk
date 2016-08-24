@@ -36,6 +36,11 @@ IncludeTemplateLangFile(__FILE__);
 	if (strpos($APPLICATION->GetCurPage(true), SITE_DIR.'gallery/') !== false) {
 		$isGallery = true;
 	}
+	// is sight page
+	$isSight = false;
+	if (strpos($APPLICATION->GetCurPage(true), SITE_DIR.'sight/') !== false) {
+		$isSight = true;
+	}
 
 	$APPLICATION->AddHeadString('
 		<script>
@@ -67,6 +72,12 @@ IncludeTemplateLangFile(__FILE__);
 	$APPLICATION->AddHeadString('
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAckPfKH6q-sp1kl2JaQih7CEFWMocSMf0&sensor=false"></script>
 	');
+	if($isSight)
+	{
+		$APPLICATION->AddHeadString('
+			<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		');
+	}
 	$APPLICATION->AddHeadString('
 		<!-- BEGIN CLICKTEX CODE {literal} -->
 			<script type="text/javascript" charset="utf-8" async="async" src="//www.clicktex.ru/code/26346"></script>

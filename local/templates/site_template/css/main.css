@@ -1,4 +1,4 @@
-    /*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -1725,6 +1725,165 @@ a.book-button:after {
 
 /*------------- end rating ------------*/
 
+/*------------- begin sight ------------*/
+
+.sigth {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 90px;
+    font-family: 'helvetica_neue', Arial, Helvetica, sans-serif;
+    z-index: 0;
+}
+.sigth * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.sigth-map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.sigth-map__inner {
+    width: 100%;
+    height: 100%;
+}
+
+.sigth-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 340px;
+    min-width: 320px;
+    height: 100%;
+    padding: 30px 40px 30px 55px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 1;
+}
+
+.sigth-menu__title {
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    font-family: 'hagin_caps_mediumregular', sans-serif;
+    text-transform: uppercase;
+}
+
+.sigth-menu__list {
+    margin: 0;
+    padding: 0;
+}
+
+.sigth-menu__item {
+    position: relative;
+    min-height: 25px;
+    margin: 0 0 17px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sigth-menu__link {
+    position: relative;
+    display: inline-block;
+    padding-left: 35px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sigth-menu__link:hover,
+.sigth-menu__link:focus,
+.sigth-menu__link:active {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+}
+
+.sigth-menu__link:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    display: inline-block;
+    width: 27px;
+    height: 26px;
+    background: url(/local/images/sprite-sigth-menu-icons.png) 0 0 no-repeat;
+}
+.sigth-menu__item_aquapark .sigth-menu__link:before {
+    background-position: 0 -42px;
+}
+.sigth-menu__item_dolphinarium .sigth-menu__link:before {
+    background-position: 0 -85px;
+}
+.sigth-menu__item_safari .sigth-menu__link:before {
+    background-position: 0 -137px;
+}
+.sigth-menu__item_parus .sigth-menu__link:before {
+    background-position: 0 -177px;
+}
+.sigth-menu__item_dolmen .sigth-menu__link:before {
+    top: -4px;
+    background-position: 0 -218px;
+}
+.sigth-menu__item_dolmen-model .sigth-menu__link:before {
+    top: -5px;
+    background-position: 0 -258px;
+}
+.sigth-menu__item_cableway .sigth-menu__link:before {
+    top: -5px;
+    background-position: 0 -308px;
+}
+.sigth-menu__item_embankment .sigth-menu__link:before {
+    top: -5px;
+    background-position: 0 -356px;
+}
+
+
+.sigth-map__inner [class$="-balloon__close"] + [class$="-balloon__content"] {
+    margin-right: 0;
+    padding: 0;
+}
+.sigth-map-balloon {
+    width: 280px;
+    padding: 18px 0;
+    font-family: 'helvetica_neue', Arial, Helvetica, sans-serif;
+}
+.sigth-map-balloon__header {
+    padding: 0 35px 0 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+}
+.sigth-map-balloon__img {
+    max-width: 100%;
+}
+.sigth-map-balloon__action {
+    padding: 20px 30px 10px 30px;
+}
+.sigth-map-balloon__action a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: none;
+    color: #3bb9eb;
+}
+
+/*-------------- end sight -------------*/
+
 /* ==========================================================================
    Media queries
    ========================================================================== */
@@ -1837,6 +1996,10 @@ a.book-button:after {
         padding-right: 27px;
     }
     .main-slider {
+        padding-top: 126px;
+    }
+    
+    .sigth {
         padding-top: 126px;
     }
     
@@ -1980,7 +2143,8 @@ a.book-button:after {
 }
 
 @media screen and (max-width: 840px) {
-    body.index {
+    body.index,
+    body.page-sigth {
         overflow: auto;
         overflow-x: hidden;
     }
@@ -2164,6 +2328,32 @@ a.book-button:after {
     }
     .reviews-form {
         margin-bottom: -150px;
+    }
+    .sigth {
+        position: relative;
+        padding-top: 0;
+        width: auto;
+        height: auto;
+    }
+    .sigth-map {
+        height: auto;
+    }
+    .sigth-menu {
+        position: static;
+        width: 100%;
+        display: block;
+        background-color: rgba(0,0,0,1);
+    }
+    .sigth-menu__list {
+        word-spacing: -.34em;
+    }    
+    .sigth-menu__item {
+        display: inline-block;
+        width: 50%;
+        word-spacing: normal;
+    }
+    .sigth-map__inner {
+        height: 400px;
     }
 }
 
@@ -2543,6 +2733,15 @@ a.book-button:after {
     .reviews-form .form__item_btn {
         margin-top: 15px;
     }
+    
+    .sigth-menu {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .sigth-menu__item {
+        display: block;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -2597,6 +2796,12 @@ a.book-button:after {
     }
 
 
+}
+
+@media screen and (max-height: 400px) {
+    .sigth-map__inner {
+        height: 300px;
+    }
 }
 
 /* iPhone 5 & 5S in portrait & landscape */
