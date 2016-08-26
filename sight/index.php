@@ -4,15 +4,15 @@ $APPLICATION->SetPageProperty("description", "Бутик-отель Морско
 $APPLICATION->SetPageProperty("TITLE", "Бутик-отель Морской Клуб (Sea Club Boutique Hotel) – приглашаем Вас на лучший элитный отдых на Черном море.");
 $APPLICATION->SetTitle("Бутик-отель Морской Клуб (Sea Club Boutique Hotel) – приглашаем Вас на лучший элитный отдых на Черном море");
 ?>
-<?// Новости (комплексный компонент) - http://dev.1c-bitrix.ru/user_help/content/iblock/components_2/news/news.php
+<?
 $APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	"sight",
+	"sight", 
 	array(
 		"SEF_MODE" => "Y",
 		"AJAX_MODE" => "N",
 		"IBLOCK_TYPE" => "dynamic_content",
-		"IBLOCK_ID" => "2",
+		"IBLOCK_ID" => "10",
 		"NEWS_COUNT" => "99",
 		"USE_SEARCH" => "N",
 		"USE_RSS" => "N",
@@ -32,8 +32,10 @@ $APPLICATION->IncludeComponent(
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "GROUPS",
+			1 => "ICON",
+			2 => "POINT",
+			3 => "",
 		),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"DISPLAY_NAME" => "Y",
@@ -46,8 +48,10 @@ $APPLICATION->IncludeComponent(
 			1 => "",
 		),
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "GROUPS",
+			1 => "ICON",
+			2 => "POINT",
+			3 => "",
 		),
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "N",
@@ -72,12 +76,12 @@ $APPLICATION->IncludeComponent(
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
-		"SEF_FOLDER" => "/rooms/",
+		"SEF_FOLDER" => "/sight/",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
-		"COMPONENT_TEMPLATE" => "list-three-elem",
+		"COMPONENT_TEMPLATE" => "sight",
 		"SET_LAST_MODIFIED" => "N",
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"DISPLAY_DATE" => "Y",
@@ -86,7 +90,7 @@ $APPLICATION->IncludeComponent(
 		"USE_SHARE" => "N",
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"PAGER_BASE_LINK_ENABLE" => "N",
-		"SHOW_404" => "N",
+		"SHOW_404" => "Y",
 		"MESSAGE_404" => "",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",

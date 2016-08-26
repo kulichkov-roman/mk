@@ -15,7 +15,8 @@
 			'sightIBlockId'      => 10,
 			'roomsDir'           => '/rooms/',
 			// Заглушка для слайдера на главной
-			'w1280PlugId'        => 21
+			'w1280PlugId'        => 21,
+			'w280PlugId'         => 126
 		)
 	)
 );
@@ -29,5 +30,12 @@ if(\Bitrix\Main\Loader::includeModule('itconstruct.resizer'))
             'type' => 'jpg'
         )
     );
+	itc\Resizer::addPreset('w280', array(
+			'mode' => 'width',
+			'width' => '280',
+			'height' => null,
+			'type' => 'jpg'
+		)
+	);
 }
 

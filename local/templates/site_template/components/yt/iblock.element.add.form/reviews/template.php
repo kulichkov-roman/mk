@@ -64,7 +64,7 @@ if (strlen($arResult["MESSAGE"]) > 0) {
 							<li class="rating__item"></li>
 							<li class="rating__item"></li>
 						</ul>
-						<input type="hidden">
+						<input name="PROPERTY[2][0]" type="hidden">
 					</div>
 				</div>
 			</li>

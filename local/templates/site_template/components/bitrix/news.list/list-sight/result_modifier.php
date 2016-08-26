@@ -32,7 +32,7 @@ if(sizeof($arIds) > 0)
     while($arItem = $rsFile->GetNext())
     {
         $arPreviewPicture[$arItem['ID']] = $arItem;
-        $urlPreviewPicture = itc\Resizer::get($arItem['ID'], 'w1280');
+        $urlPreviewPicture = itc\Resizer::get($arItem['ID'], 'w280');
 
         $arPreviewPicture[$arItem['ID']]['SRC'] = $urlPreviewPicture;
     }
@@ -46,7 +46,7 @@ if(sizeof($arIds) > 0)
         }
         else
         {
-            $arItem['PREVIEW_PICTURE']['SRC'] = itc\Resizer::get($environment->get('w1280PlugId'), 'w1280');
+            $arItem['PREVIEW_PICTURE']['SRC'] = itc\Resizer::get($environment->get('w280PlugId'), 'w280');
         }
     }
     unset($arItem);
@@ -55,7 +55,7 @@ else
 {
     foreach($arResult['ITEMS'] as &$arItem)
     {
-        $arItem['PREVIEW_PICTURE']['SRC'] = itc\Resizer::get($environment->get('w1280PlugId'), 'w1280');
+        $arItem['PREVIEW_PICTURE']['SRC'] = itc\Resizer::get($environment->get('w280PlugId'), 'w280');
     }
     unset($arItem);
 }
