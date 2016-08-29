@@ -16,8 +16,7 @@ $this->setFrameMode(true);
 <div class="sigth-menu">
 	<div class="sigth-menu__inner">
 		<div class="sigth-menu__title">
-			Достопримечательности<br>
-			Морского клуба
+			Достопримечательности
 		</div>
 		<ul class="sigth-menu__list">
 			<?$index = 0;?>
