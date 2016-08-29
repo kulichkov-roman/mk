@@ -24,7 +24,7 @@ $environment = \YT\Environment\EnvironmentManager::getInstance();
 if (strlen($arResult["MESSAGE"]) > 0) {
 	?>
 	<div class="form__title">
-		Спасибо за заявку! С Вами свяжется наш менеджер в ближайшее время!
+		Спасибо за ваш отзыв!
 	</div>
 	<?
 } else {
