@@ -70,6 +70,10 @@ IncludeTemplateLangFile(__FILE__);
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/developers.js');
 
 	$APPLICATION->AddHeadString('
+		<link rel="shortcut icon" href="/favicon.png" />
+	');
+
+	$APPLICATION->AddHeadString('
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAckPfKH6q-sp1kl2JaQih7CEFWMocSMf0&sensor=false"></script>
 	');
 	if($isSight)
