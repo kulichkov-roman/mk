@@ -70,7 +70,7 @@ IncludeTemplateLangFile(__FILE__);
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/developers.js');
 
 	$APPLICATION->AddHeadString('
-		<link rel="shortcut icon" href="/favicon.png" />
+		<link rel="shortcut icon" href="/favicon.ico" />
 	');
 
 	$APPLICATION->AddHeadString('
